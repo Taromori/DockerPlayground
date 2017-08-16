@@ -1,10 +1,9 @@
 version: '2'
 services:
     web:
-        build: ./revel
-        command: revel run revelDir
-        container_name: revel
+        build: .
+        command: revel run revel_app
         volumes:
-           - ./:/go/src/revelDir
+           - ./revel_app:/go/src/revel_app
         ports:
             - 9000:9000

@@ -14,8 +14,8 @@ services:
     elas:
         image: docker.elastic.co/elasticsearch/elasticsearch:5.5.0
         volumes:
-            - ./esdata:$HOME/Desktop/elasticsearch/data
-            - ./script/elasticsearch.yml:$HOME/Desktop/elasticsearch/5/config/elasticsearch.yml
-            - ./script/log4j2.properties:$HOME/Desktop/elasticsearch/5/config/log4j2.properties
+            - ./esdata:/usr/share/elasticsearch/data
+            - ./script/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+            - ./script/log4j2.properties:/usr/share/elasticsearch/config/log4j2.properties
         ports:
             - 9200:9200

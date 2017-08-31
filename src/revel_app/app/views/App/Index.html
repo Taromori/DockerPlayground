@@ -1,12 +1,25 @@
 {{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<header class="jumbotron" style="background-color:#A9F16C">
+<header>
   <div class="container">
     <div class="row">
-      <h1>It works!</h1>
-      <p></p>
+      <h3>
+          <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  社員名簿
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">社員名簿</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">その他検索</a></li>
+                </ul>
+          </div>
+      </h3>
     </div>
+    <br>
+    {{template "search.html" .}}
   </div>
 </header>
 
